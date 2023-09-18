@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>SPLS, 22 July 2020, online (organised by Stirling)</title>
+  <link rel="stylesheet" href="spls.css">
+  <script>
+    function showAbstract(name) {
+      var abstract = document.getElementById(name + "/abstract");
+      var button = document.getElementById(name + "/button");
+      button.style.display = "none";
+      abstract.style.display = "block";
+    }
+    function hideAbstract(name) {
+      var abstract = document.getElementById(name + "/abstract");
+      var button = document.getElementById(name + "/button");
+      button.style.display = "block";
+      abstract.style.display = "none";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Scottish Programming Languages Seminar</h1>
+    <p class="header">
+      <a href="https://www.stir.ac.uk/"><img class="logo" src="uos-logo.svg" alt="University of Stirling Logo" height="48px"></a>
+      &nbsp;&nbsp;
+      <a href="http://www.sicsa.ac.uk/"><img class="logo" src="sicsa-logo.jpg" alt="SICSA Logo"></a>
+    </p>
+  </header>
+
+<!--
+  <section>
+    <h3>COVID-19 Pandemic: SPLS meetings to go virtual</h3>
+    <p>
+      With university campuses in lockdown and likely to remain unavailable
+      for the remainder of the year, there won't be a physical SPLS meeting
+      for the foreseeable future.
+      Options for virtual SPLS meetings are being explored.
+      Watch the SPLS mailing list for announcements.
+    </p>
+  </section>
+
+  <section>
+    <h3>COVID-19 Disclaimer</h3>
+    <p>
+      This SPLS meeting is being organised on the assumption
+      that public life in Scotland will not be severely curtailed.
+      If this changes and we are advised to cancel due to the COVID-19
+      epidemic, we will brief via this page and the SPLS mailing list.
+    </p>
+  </section>
+-->
+
+  <section>
+    <h3>Time and Place</h3>
+    <p>
+      Wednesday, <strong>22 July 2020</strong>, 13:00 - 18:00,
+      <span style="text-decoration: line-through red double;">Stirling University</span> <strong>online</strong>
+    </p>
+  </section>
+
+<!--
+  <section>
+    <h3>Registration</h3>
+    <p>
+      Knowing roughly how many people plan to join this meeting will help with
+      planning the tool setup.
+      Please register by filling in the
+      <a href="https://doodle.com/poll/cnmnr95spihvmere">Doodle poll</a>.
+    </p>
+  </section>
+-->
+
+  <section>
+    <h3>Virtual Attendance</h3>
+    <ul>
+      <li>
+	Please register on this
+	<a href="https://doodle.com/poll/cnmnr95spihvmere">Doodle poll</a>
+	if you haven't done so already.
+      </li>
+      <li>
+	The talks will be live streamed on Youtube.
+      </li>
+      <li>
+	Audience Q&amp;A will be handled via Slido.
+      </li>
+      <li>
+        Links to the Youtube stream and the Slido event will be distributed
+	via the SPLS mailing list and Zulip chat the night before the meeting.
+      </li>
+      <li>
+	Please contact the organiser by email if you would like to attend
+	but aren't subscribed to the mailing list.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Programme</h3>
+
+    <h5>13:00 &mdash; 13:30 &nbsp;&nbsp; WELCOME</h5>
+
+    <h5>13:30 &mdash; 14:30 &nbsp;&nbsp; SESSION 1: Programming Language Design and Compilers</h5>
+    <table>
+      <tr>
+	<td class="author">
+	  <a href="https://michel.steuwer.info/">Michel Steuwer</a> (Glasgow)
+	</td>
+	<td class="title">
+	  <span>Achieving High-Performance the Functional Way &mdash; Expressing High-Performance Optimizations as Rewrite Strategies</span>
+	  <div class="abstract" id="Michel/button">
+	    <button onclick="showAbstract('Michel')">Abstract</button>
+	  </div>
+	  <div class="abstract" id="Michel/abstract" style="display:none;" onclick="hideAbstract('Michel')">
+	    <p>
+	      Optimizing programs to run efficiently on modern parallel
+	      hardware is hard but crucial for many applications. The
+	      predominantly used imperative languages
+	      &mdash; like C or OpenCL &mdash;
+	      force the programmer to intertwine the code describing
+	      functionality and optimizations. This results in a
+	      portability nightmare that is particularly problematic given
+	      the accelerating trend towards specialized hardware devices
+	      to further increase efficiency.
+	    </p>
+	    <p>
+	      Many emerging DSLs used in performance demanding domains
+	      such as deep learning or high-performance image processing
+	      attempt to simplify or even fully automate the optimization
+	      process. Using a high-level &mdash; often functional &mdash;
+	      language, programmers focus on describing functionality in a
+	      declarative way. In some systems such as Halide or TVM,
+	      a separate schedule specifies how the program should be optimized.
+	      Unfortunately, these schedules are not written in well-defined
+	      programming languages. Instead, they are implemented as a set
+	      of ad-hoc predefined APIs that the compiler writers have exposed.
+	    </p>
+	    <p>
+	      In this talk, we show how to employ functional programming
+	      techniques to solve this challenge with elegance. We present
+	      two functional languages that work together &mdash; each
+	      addressing a separate concern. RISE is a functional language
+	      for expressing computations using well known functional
+	      data-parallel patterns. ELEVATE is a functional language
+	      for describing optimization strategies. A high-level
+	      RISE program is transformed into a low-level form using
+	      optimization strategies written in ELEVATE. From the rewritten
+	      low-level program high-performance parallel code is automatically
+	      generated. In contrast to existing high-performance
+	      domain-specific systems with scheduling APIs, in our approach
+	      programmers are not restricted to a set of built-in operations
+	      and optimizations but freely define their own computational
+	      patterns in RISE and optimization strategies in ELEVATE
+	      in a composable and reusable way. We show how our holistic
+	      functional approach achieves competitive performance with
+	      the state-of-the-art imperative systems Halide and TVM.
+	    </p>
+	    <p>
+	      This talk is based on the functional pearl "Achieving
+	      High-Performance the Functional Way &mdash; A Functional Pearl
+	      on Expressing High-Performance Optimizations
+	      as Rewrite Strategies" to appear at ICFP 2020.
+	    </p>
+          </div>
+	</td>
+      </tr>
+      <tr>
+	<td class="author">
+          <a href="https://homepages.inf.ed.ac.uk/slindley/">Sam Lindley</a> (Heriot-Watt)
+	</td>
+	<td class="title">
+          <span>The Virtues of Semi-Explicit Polymorphism</span>
+	  <div class="abstract" id="Sam/button">
+	    <button onclick="showAbstract('Sam')">Abstract</button>
+	  </div>
+	  <div class="abstract" id="Sam/abstract" style="display:none;" onclick="hideAbstract('Sam')">
+	    <p>
+              There are two standard ways of specifying a type system for ML:
+	      an orthogonal presentation and a syntax-directed presentation.
+	      The former allows implicit generalisation and instantiation
+	      anywhere in a program, and is thus not syntax-directed. The
+	      latter fuses generalisation with let-bindings and instantiation
+	      with variables, and is thus non-orthogonal. By introducing
+	      explicit syntax for generalisation and instantiation, that is,
+	      semi-explicit polymorphism, we obtain a presentation of
+	      Explicit ML, a mild variant of ML, which is both orthogonal
+	      and syntax-directed. Moreover, we recover the usual implicit
+	      version of ML as syntactic sugar.
+	    </p>
+	    <p>
+	      FreezeML is a small extension of ML providing first-class
+	      polymorphism and sound and complete type inference of
+	      principal types, whose typing rules are non-orthogonal.
+	      We show that Explicit ML extends naturally to Explicit FreezeML,
+	      an orthogonal presentation of an explicit variant of FreezeML.
+	      We recover the usual implicit version of FreezeML as syntactic
+	      sugar. Explicit FreezeML is a conservative extension of both
+	      Explicit ML and System F.
+	    </p>
+          </div>
+	</td>
+      </tr>
+    </table>    
+
+    <h5>14:30 &mdash; 15:00 &nbsp;&nbsp; BREAK</h5>
+
+    <h5>15:00 &mdash; 16:00 &nbsp;&nbsp; SESSION 2: Types and Semantics</h5>
+    <table>
+      <tr>
+	<td class="author">
+	  <!--<a href="https://www.inf.ed.ac.uk/people/students/Jesse_Sigal.html">-->Jesse Sigal<!--</a>--> (Edinburgh)
+	</td>
+	<td class="title">
+	  <span>Automatic Differentiation via Effects and Handlers</span>
+	  <div class="abstract" id="Jesse/button">
+	    <button onclick="showAbstract('Jesse')">Abstract</button>
+	  </div>
+	  <div class="abstract" id="Jesse/abstract" style="display:none;" onclick="hideAbstract('Jesse')">
+	    <p>
+              We will present implementations of various automatic
+	      differentiation (AD) modes via effects and handlers.
+	      The underlying theory is still in progress.
+	    </p>
+	    <p>
+              Automatic differentiation's aim is to calculate the derivative
+	      of a program which uses mathematical functions. A natural class
+	      of functions to consider are smooth (infinitely differentiable)
+	      functions. Smooth functions form an algebraic (Lawvere) theory
+	      in the context of universal algebra. Algebraic theories are often
+	      at the base of denotational semantics for effects and handlers,
+	      and this observation leads to natural implementations of AD.
+	    </p>
+	    <p>
+              We implement forward mode, reverse mode, and checkpointed reverse
+	      mode in the Frank language. These modes can be nested (which is
+	      non-trivial in some systems). Their implementation as handlers
+	      also seems to enable useful equational reasoning.
+	    </p>
+          </div>
+	</td>
+      </tr>
+      <tr>
+	<td class="author">
+          <a href="https://wenkokke.github.io/">Wen Kokke</a> (Heriot-Watt, Edinburgh)
+	</td>
+	<td class="title">
+          <span>Robustness as a Refinement Type</span>
+	  <div class="abstract" id="Wen/button">
+	    <button onclick="showAbstract('Wen')">Abstract</button>
+	  </div>
+	  <div class="abstract" id="Wen/abstract" style="display:none;" onclick="hideAbstract('Wen')">
+	    <p>
+	      We present StarChild and Lazuli, two libraries which leverage
+	      refinement types to verify neural network, implemented in F*
+	      and Liquid Haskell.
+	      Refinement types are types augmented, or refined, with assertions
+	      about values of that type, e.g., “integers greater than five”,
+	      which are checked by an SMT solver. Crucially, these assertions
+	      are written in the language itself. A user of our library can
+	      refine the type of neural networks, e.g., “MNIST neural networks
+	      which are robust against adversarial attacks”, and expect F* to
+	      handle the verification of this claim for any specific network,
+	      without having to change the representation of the network, or
+	      even having to learn about SMT solvers.
+	    </p>
+	    <p>
+	      Our initial experiments indicate that our approach could greatly
+	      reduce the burden of verifying neural networks. Unfortunately,
+	      they also show that SMT solvers do not scale to the sizes
+	      required for neural network verification.
+	    </p>
+          </div>
+	</td>
+      </tr>
+    </table>    
+
+    <h5>16:00 &mdash; 16:30 &nbsp;&nbsp; BREAK</h5>
+
+    <h5>16:30 &mdash; 17:15 &nbsp;&nbsp; SESSION 3: Dependent Types</h5>
+    <table>
+      <tr>
+	<td class="author">
+          <a href="https://bentnib.org/">Bob Atkey</a> (Strathclyde)
+	</td>
+	<td class="title">
+          <span>Resource Constrained Programming with Full Dependent Types</span>
+	  <div class="abstract" id="Bob/button">
+	    <button onclick="showAbstract('Bob')">Abstract</button>
+	  </div>
+	  <div class="abstract" id="Bob/abstract" style="display:none;" onclick="hideAbstract('Bob')">
+	    <p>
+              I will talk about a system that combines Dependent Types and
+              Linear Types. As an application of this system, I will show how
+	      to transport Martin Hofmann's LFPL and Amortised Resource
+	      analysis systems for resource constrained computing to full
+	      dependent types. This results in a theory where unconstrained
+	      computations are allowed at the type level, but only polynominal
+	      time computations at the term level. The combined system now
+	      allows one to explore the world of propositions whose proofs
+	      are not only constructive, but also of restricted complexity.
+	    </p>
+          </div>
+	</td>
+      </tr>
+    </table>    
+
+    <h5>17:15 &mdash; 18:00 &nbsp;&nbsp; CLOSING/PUB</h5>
+  </section>
+  
+<!--
+  <section>
+    <h3>Directions</h3>
+    <p>
+      <a href="https://www.stir.ac.uk/about/getting-here/">Getting to Stirling University Campus</a>
+    </p>
+    <ul>
+      <li>The Cottrell Building is the very long building next to the University Hub bus station.</li>
+      <li>There is car parking on campus but space is limited and quite expensive.</li>
+    </ul>
+  </section>
+-->
+
+<!--
+  <section>
+    <h3>Acknowledgements</h3>
+    <p>
+      This event has received financial support from
+      <a href="http://www.sicsa.ac.uk/">SICSA</a>,
+      the Scottish Informatics and Computer Science Alliance and
+      the <a href="http://cs.stir.ac.uk/">Division of Computing Science and Mathematics</a>
+      at the University of Stirling.
+    </p>
+  </section>
+-->
+
+  <section>
+    <h3>Organisers</h3>
+    <p>
+      General information about SPLS is available from the
+      <a href="https://spls-series.github.io">SPLS page</a>.
+    </p>
+    <p>
+      For information about this event, please contact 
+      <a href="http://www.cs.stir.ac.uk/~cpm/">Patrick Maier</a>
+      (email: firstname.lastname@stir.ac.uk).
+    </p>
+  </section>
+
+  <footer>
+    <hr>
+    <p class="footer">
+      Last updated 19 July 2020
+      &dash; <a href="http://www.cs.stir.ac.uk/~cpm/">Patrick Maier</a>
+    </p>
+  </footer>
+</body>
+</html>

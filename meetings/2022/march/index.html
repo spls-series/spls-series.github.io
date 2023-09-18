@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPLS, March 9th 2022 hosted by The University of Edinburgh</title>
+     <style type="text/css">
+      body {
+        color: black;
+        background: white;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
+      li {
+        margin-top: 10px;
+      }
+
+      li:first-child, .dense li {
+        margin-top: 0;
+      }
+  </style>
+  </head>
+  <body>
+    <h1>Scottish Programming Languages Seminar</h1>
+    <h1>Wednesday 9th March 2022</h1>
+    <p>
+      The <a href="../../../">Scottish Programming Languages Seminar
+        (SPLS)</a> is an informal meeting for the discussion of any
+        aspect of programming languages. This edition of SPLS will be
+        hybrid, meaning it will be possible to attend this seminar
+        either in-person or online. Physically, the seminar will be
+        held at the Informatics Forum, The University of Edinburgh on
+        Wednesday 9th March 2022. Lunch and coffee will be provided
+        for the in-person attendees.
+    </p>
+
+    <p>
+      Information and updates about the March 2022 edition of
+      SPLS will be communicated via
+      the <a href="https://mr1.dcs.gla.ac.uk/mailman/listinfo/spls">SPLS
+        Mailing List</a>.
+    </p>
+
+    <p>
+      This meeting is funded
+      by <a href="https://www.sicsa.ac.uk/">SICSA</a>
+      and <a href="https://royalsociety.org/">The Royal Society</a>.
+    </p>
+    <p>
+      <img src="../../2019/june/static/images/sicsa_blue.jpg" alt="Scottish Informatics & Computer Science Alliance">
+      <img src="static/images/royal-society-logo.png" alt="The Royal Society">
+    </p>
+
+    <h2><a name="programme" class="anchor">Programme</a></h2>
+    <p>
+      Each talk slot is 25+5 minutes, meaning the speaker has at most
+      25 minutes for presentation, the remaining 5 minutes are
+      reserved for questions.
+    </p>
+      <table border="1">
+        <tr>
+          <th>Time</th>
+          <th>Speaker(s)</th>
+          <th>Title &amp; Abstract</th>
+        </tr>
+        <!-- Lunch -->
+        <tr>
+          <th>12:00</th>
+          <th colspan="3">Lunch</th>
+        </tr>
+        <!-- Session 1 -->
+        <tr>
+          <th>&nbsp;</th><th colspan="3">Session 1: A differentiated future</th>
+        </tr>
+        <!-- First talk -->
+        <tr>
+          <td>13:00</td>
+          <td>
+            <ul>
+              <li>Conor McBride</li>
+              <li>Sam Lindley</li>
+              <li>Simon Gay</li>
+            </ul>
+          </td>
+          <td>
+            <b>Launching the Scottish Programming Languages Institute</b>
+            <p>
+              We propose to set up a Scottish Programming Languages
+              Institute (SPLI) as an umbrella for activities such as
+              the Scottish Programming Languages Seminar (SPLS), the
+              Scottish Summer School on Programming Languages and
+              Verification (SPLV), various seminar series that have
+              grown beyond their host institutions, and industrial
+              engagement. By formally consolidating the breadth, depth
+              and expertise of programming language research in
+              Scotland, SPLI will provide a platform for future
+              initiatives.
+            </p>
+          </td>
+        </tr>
+        <!-- Second talk -->
+        <tr>
+          <td>13:30</td>
+          <td>James McKinna</td>
+          <td>
+            <b>Automatic differentiation, in forward- and reverse-mode, as a one-liner</b>
+            <p>
+              This talk aims to demystify the basics of automatic
+              differentiation (AD) by considering it as an abstract
+              evaluator of symbolic expressions (the 'one-liner' of
+              the title). We further show how to incorporate the
+              mysteries of forward- and backward-mode AD by changing
+              the result type of the evaluation in interesting, but
+              algebraically comprehensible, ways, which moreover
+              realise the successive improvements, in computational
+              complexity, from purely functional vanilla forward-mode
+              AD to imperative, array-based, reverse-mode AD.
+            </p>
+            <p>
+              Joint work with Birthe van den Bergh, Tom Schrijvers (KU
+              Leuven) and Alexander Vandenbroucke (Standard Chartered).
+            </p>
+          </td>
+        </tr>
+        <!-- Coffee break 1 -->
+        <tr>
+          <th>14:00</th><th colspan="3">Coffee break</th>
+        </tr>
+        <!-- Session 2 -->
+        <tr>
+          <th>&nbsp;</th>
+          <th colspan="3">Session 2: Data {types,science}</th>
+        </tr>
+        <!-- Third talk -->
+        <tr>
+          <td>14:30</td>
+          <td>Xueying Qin</td>
+          <td>
+            <b>Property-based container data types</b>
+            <p>
+              Container data types such as sets, lists, and trees,
+              represent collections of data that, are commonly used in
+              computer programs. Much work have been done in the past
+              decades to design better abstraction, improve
+              performance and verify correctness for container data
+              types. However, one crucial problem still
+              exists. Currently, when choosing a container data type,
+              programmers can not choose an abstract container only
+              based on the desired container’s behaviours, but they
+              must choose a concrete implementation of that abstract
+              container as well. For example, instead of being able to
+              request a container with unique elements, programmers
+              must choose between possible implementation such as
+              trees or hash sets. One serious drawback is that the
+              chosen concrete implementation cannot provide the
+              desirable performance or memory efficiency in all usage
+              scenarios. Also, the portability of programs is limited
+              as one concrete implementation might only have optimised
+              performance for certain hardware systems.
+            </p>
+          </td>
+        </tr>
+        <!-- Fourth talk -->
+        <tr>
+          <td>15:00</td>
+          <td>Robert Wright</td>
+          <td>
+            <b>Idris Type-Driven Data Science</b>
+            <p>
+              Traditionally, most data science is done in dynamically
+              typed languages. If you're manipulating a table of data,
+              and make a typo in a column name, or ask for the wrong
+              column, then you don't find out until runtime - after
+              which significant computation may have taken place. So a
+              small mistake could lose a large amount of time.
+            </p>
+            <p>
+              With dependant types, we can express the schemas of
+              tables at compile-time. This allows us to check, at
+              compile-time, that our columns exist, and are of the
+              correct types.
+            </p>
+            <p>
+              We will go through a simple machine learning example,
+              and show the whole workflow, to demonstrate how
+              dependant types can help the process.
+            </p>
+          </td>
+        </tr>
+        <!-- Coffee break 2 -->
+        <tr>
+          <th>15:30</th><th colspan="3">Coffee break</th>
+        </tr>
+        <!-- Session 3 -->
+        <tr>
+          <th>&nbsp;</th>
+          <th colspan="3">Session 3: Stay safe</th>
+        </tr>
+        <!-- Fifth talk -->
+        <tr>
+          <td>16:00</td>
+          <td>Bastian K&ouml;pcke</td>
+          <td>
+            <b>Descend: A safe GPU systems programming language</b>
+            <p>
+              Programming Graphics Processing Units (GPUs) is a
+              challenging task even for expert programmers. Thousands
+              of GPU threads have to be coordinated to safely make
+              efficient use of the hardware resources. The most common
+              GPU programming language CUDA, a variant of C, offers
+              programmers great control over which thread operates at
+              which time on which memory location. This is essential
+              for achieving high performance but comes with the same
+              memory and concurrency safety challenges well-known in
+              C.  High-level languages such as Futhark or RISE address
+              this by severely restricting the programmers' ability to
+              control low-level details and providing fixed common
+              higher level computational patterns, such as map and
+              reduce.
+            </p>
+            <p>
+              We present a new GPU programming language, Descend, that
+              aims to combine the advantages of both approaches:
+              enabling precise control safely.  Descend is heavily
+              inspired by Rust, but addresses additional challenges
+              arising from the GPU hardware. Descend 1) guarantees
+              memory safety in the presence of thousands of parallel
+              executing threads, 2) ensures the correct interaction
+              between CPU and GPU, 3) enforces the GPU’s thread and
+              memory hierarchy.
+            </p>
+            <p>
+              In this talk, I will present our current status of
+              designing and implementing Descend, which includes a
+              Rust-style affine type system with extended borrowing
+              rules, and a prototype implementation of a compiler
+              generating CUDA code. I will present Descend using
+              examples to highlight how it enforces memory safety while
+              allowing users to maintain control.
+            </p>
+          </td>
+        </tr>
+        <!-- Sixth talk -->
+        <tr>
+          <td>16:30</td>
+          <td>Jeremy Singer</td>
+          <td>
+            <b>Capability Boehm: Challenges and Opportunities for Garbage Collection with Capability Hardware</b>
+            <p>
+              The Boehm-Demers-Weiser Garbage Collector (BDWGC) is a
+              production-quality memory management framework for C/C++
+              applications. In this talk, we explore adapting BDWGC
+              for modern capability hardware, in particular the CHERI
+              system, which provides guarantees about memory safety
+              due to runtime enforcement of fine-grained pointer
+              bounds and permissions. We describe various challenges
+              presented by the CHERI micro-architectural constraints,
+              along with some significant opportunities for runtime
+              optimization.
+            </p>
+          </td>
+        </tr>
+      </table>
+      <!-- <ul> -->
+      <!--   <li>12:00 - 13:00 Lunch</li> -->
+      <!--   <li>13:00 - 14:00 Session 1</li> -->
+      <!--   <li>14:00 - 14:30 Coffee break</li> -->
+      <!--   <li>14:30 - 15:30 Session 2</li> -->
+      <!--   <li>15:30 - 16:00 Coffee break</li> -->
+      <!--   <li>16:00 - 17:00 Session 3</li> -->
+      <!-- </ul> -->
+      <!-- Confirmed speakers -->
+      <!-- <ul> -->
+      <!--   <li>James McKinna (Heriot-Watt University) (presents in-person)</li> -->
+      <!--   <li>Jeremy Singer (University of Glasgow) (presents in-person)</li> -->
+      <!--   <li>Conor McBride (University of Strathclyde)/Sam Lindley (The University of Edinburgh)/Simon Gay (University of Glasgow) (present in-person)</li> -->
+      <!--   <li>Bastian K&ouml;pcke (Universit&auml;t M&uuml;nster) (presents remotely)</li> -->
+      <!--   <li>Xueying Qin (The University of Edinburgh) (TBD)</li> -->
+      <!--   <li>Rob Wright (The University of Edinburgh) (presents in-person)</li> -->
+      <!-- </ul> -->
+    </p>
+
+    <h2><a name="attending" class="anchor">Attending</a></h2>
+
+    <p>
+    It is possible to attend the meeting in one of two ways: in-person
+    or remotely via a video conferencing platform. In either case we
+    ask that you <a href="#registration">register (see below)</a> such
+    that we can allocate adequate resources to support both attendance
+    modes.
+    </p>
+
+    <h3>Remote participation</h3>
+
+    <p>
+      The talks will be live streamed
+      on <a href="https://ed-ac-uk.zoom.us/j/81180070031">Zoom</a> as
+      well as on the <a href="https://youtu.be/YfWdHQ4DpQg">SPLS
+      YouTube channel</a>. Both streams will go live before 13:00
+      GMT. The details for the Zoom room are available on
+      the <a href="https://spls.zulipchat.com/#narrow/stream/227707-spls">&#35;spls</a>
+      channel on Zulip.
+    </p>
+    <p>
+      Remote attendees can ask questions to speakers live via Zoom by
+      either using the raise hand feature or typing the question
+      directly into the Zoom room chat or posting it on the topic
+      stream on Zulip.
+    </p>
+
+    <h3>In-person participation</h3>
+    <p>
+      At the time of writing we are allowed a maximum of 50 in-person
+      attendees. Every in-person attendee must follow the following
+      rules.
+      <ul>
+        <li>Take at least one lateral flow test within 24 hours prior to
+          the seminar, and only show up in person if the test result is
+          negative</li>
+        <li>Masks most be worn in all public areas until seated</li>
+        <li>Sign in for track and trace purposes</li>
+      </ul>
+    </p>
+
+    <p>
+      The in-person component will take place
+      in <span style="font-weight:bold;">room G.07</span>. Lunch and
+      coffee breaks will also take place in
+      <span style="font-weight:bold;">G.07</span>. All will be
+      signposted on the day.
+      <div style="height:300px;width:800px;" id="map-area" class="map">
+        <!-- Spinner; only supposed to be displayed whilst the
+             Google Map iframe is loading. -->
+        <div style="height:100%;width:100%;" id="map-loader">
+            <span style="font-style:italic;">Loading interactive map...</span>
+        </div>
+        <!-- Embedded Google Map; uses JavaScript to render
+             iframe once its contents have been loaded. -->
+        <iframe id="map-instance" class="interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1183.5610174371202!2d-3.187107574010932!3d55.944767069959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c78447fcdee1%3A0xb4769668986c5918!2s10+Crichton+St%2C+Edinburgh+EH8+9AB!5e0!3m2!1sen!2suk!4v1441824634154" frameborder="0" style="display: none;" onload="displayWhenReady('map-instance', 'map-loader');" width="800px" height="300px"></iframe>
+        <!-- Notice to noscripters -->
+        <noscript>
+          Enable JavaScript to view the interactive map
+        </noscript>
+      </div>
+    </p>
+
+    <h3><a name="registration" class="anchor">Registration</a></h3>
+    <p>
+      If you plan to attend this seminar, then please register in
+      advance
+      using <a href="https://doodle.com/poll/9d8fmi4et3nvha3x?utm_source=poll&utm_medium=link">the
+      Doodle form</a>. Registration is especially important for those
+      who wish to attend the in-person component as for safety reasons
+      we only allow those who signed up in advance to participate
+      in-person on the day.
+    </p>
+
+    <h2><a name="organisers" class="anchor">Organisers</a></h2>
+    <p>
+      The organisers of this meeting are <a href="https://www.dhil.net/research/">Daniel Hillerstr&ouml;m</a>
+      (daniel.hillerstrom@ed.ac.uk) and Frank Emrich
+      (frank.emrich@ed.ac.uk), please contact them directly with any
+      questions regarding this meeting.
+    </p>
+    <!-- Import JavaScript sources -->
+    <script type="text/javascript" src="../../2019/june/static/js/lazyload_google_maps.js"></script>
+  </body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SPLS, 22 February 2023, Heriot-Watt</title>
+  <style>
+    BODY {
+      max-width: 67em; padding: 0; margin: auto;
+    }
+
+    SECTION {
+      padding-top: 1%;
+    }
+
+    H1, H2, H3, H4, H5, H6, P, TABLE, OL, UL {
+      padding: 0 3% 0 3%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 1%;
+    }
+
+    LI {
+      margin-left: 1em;
+      margin-top: 0.5em;
+    }
+
+    LI:first-child {
+      margin-top: 0.25em;
+    }
+
+    BODY {
+      font-family: sans-serif;
+      color:  #000020;
+      background-color: #ffffff;
+    }
+
+    H2, H3 {
+      font-weight: bold; 
+      color: #000080;
+      background-color: #d0d0ff;
+    }
+
+    IMG.logo {
+      vertical-align: middle;
+      max-height: 72px;
+      padding: 0 3% 0 3%;
+    }
+
+    .map {
+      padding: 0 3% 0 3%;
+    }
+
+    TABLE {
+      color: #f00000;
+    }
+
+    TH {
+      background-color: #f0f0ff;
+    }
+
+    TD {
+      color:  #200000;
+      background-color: #f0f0ff;
+      vertical-align: top;
+      padding: 1% 1% 1% 1%;
+    }
+
+    TD.author {
+      padding: 0.5% 1% 0.5% 0.5%;
+      width: 20em;
+    }
+
+    TD.title {
+      padding: 0.5% 0.5% 0.5% 1%;
+      width: 44em;
+    }
+  
+    HR {
+      color:  #3030e0;
+    }
+
+    .header {}
+
+    .footer {
+      font-weight: normal;
+      font-size: smaller;
+    }
+
+    .author {
+      font-style: normal;
+    }
+
+    .title {
+      font-style: italic;
+    }
+
+    .abstract {
+      font-style: normal;
+      font-size: 95%;
+    }
+
+    .abstract P {
+      margin: 1% 0 0 0;
+    }
+
+    TD.phdevent {
+      padding: 0.5% 0.5% 0.5% 1%;
+      width: 64em;
+    }
+  </style>
+  <script>
+    function showAbstract(name) {
+      document.getElementById(name + "/abstract").style.display = "block";
+      document.getElementById(name + "/button").style.display = "none";
+    }
+    function hideAbstract(name) {
+      document.getElementById(name + "/button").style.display = "block";
+      document.getElementById(name + "/abstract").style.display = "none";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Scottish Programming Languages Seminar</h1>
+    <h2>Wednesday, 8th March 2023</h2>
+    <p>
+      The <a href="../../../">Scottish Programming Languages Seminar (SPLS)</a>
+      is an informal meeting for discussing anything related to
+      programming languages.
+    </p>
+    <p>
+      This edition of SPLS will be held both <strong>in-person</strong>
+      and <strong>online</strong>.
+      The in-person meeting will take place in the
+      <strong>Cairn Auditorium, Postgraduate Centre</strong>
+      at the <strong>Heriot-Watt University</strong>.
+    </p>
+    <p>
+      This edition of SPLS is sponsored by <a href="https://www.sicsa.ac.uk/">SICSA</a>.
+    </p>
+    <div class="header">
+      <a href="https://www.sicsa.ac.uk/"><img class="logo" src="../../2019/june/static/images/sicsa_blue.jpg" alt="SICSA Logo"></a>
+      &nbsp;&nbsp;
+        <a href="https://www.hw.ac.uk/">
+        <img class="logo" src="../../2020/october/hw.png" alt="Heriot-Watt University">
+        </a>
+    </div>
+  </header>
+
+  <section>
+    <h3><a name="programme" class="anchor">Programme</a></h3>
+
+    <h4>12:00 &mdash; 13:00 &nbsp;&nbsp; LUNCH</h4>
+
+    <h4>13:00 &mdash; 14:00 &nbsp;&nbsp; SESSION 1: Invited Talk</h4>
+    <table>
+      <tr>
+        <td class="author">
+          Andreas Abel (Chalmers)
+        </td>
+        <td class="title">
+          <span>
+            Type-preserving compilation via dependently typed syntax
+          </span>
+          <div class="abstract" id="Andreas/button">
+            <button onclick="showAbstract('Andreas')">Abstract</button>
+          </div>
+          <div class="abstract" id="Andreas/abstract" style="display:none;">
+            <button onclick="hideAbstract('Andreas')">Hide Abstract</button>
+            <p>The <em>CompCert</em> project produced a verified
+              compiler for a large fragment of the C programming
+              language.  The CompCert compiler is implemented in the
+              type-theoretic proof assistant Coq, and is fully
+              verified: there is a proof that the semantics of the
+              source program matches the semantics of the target
+              program.  However, full verification comes with a price:
+              the majority of the formalization is concerned not with
+              the runnable code of the compiler, but with properties
+              of its components and proofs of these properties.  If we
+              are <em>not</em> willing to pay the price of full verification,
+              can we nevertheless profit from the technology of
+              type-theoretic proof assistants to make our compilers
+              <em>safer</em> and <em>less likely</em> to contain bugs?
+            </p>
+            <p>In this talk, I am presenting a compiler for a small
+              fragment of the C language using <em>dependently-typed
+              syntax</em>.  A typical compiler is proceeding in
+              phases: parsing, type checking, code generation, and
+              finally, object/binary file creation.  Parsing and type
+              checking make up the <em>front end</em>, which may
+              report syntax and type errors to the user; the other
+              phases constitute the <em>back end</em> that should only
+              fail in exceptional cases.  After type checking
+              succeeded, we have to deal only with well-typed source
+              programs, whose abstract syntax trees can be captured
+              with the indexed data types of dependently-typed proof
+              assistants and programming languages like Agda, Coq,
+              Idris, Lean etc.  More concisely, we shall by
+              <em>dependently-typed syntax</em> refer to the technique
+              of capturing well-typedness invariants of syntax trees.
+            </p>
+
+            <p>Representing also typed assembly language via
+              dependently-typed syntax, we can write a type-preserving
+              compiler whose type soundness is given <em>by
+              construction</em>.  In the talk, the target of
+              compilation is a fragment of the Java Virtual Machine
+              (JVM) enriched by some <em>administrative
+              instructions</em> that declare the types of local
+              variables.  With JVM being a stack machine, instructions
+              are indexed not only by the types of the local
+              variables, but also by the types of the stack entries
+              before and after the instruction.  However for
+              instructions that change the control flow, such as
+              unconditional and conditional jumps, we need an
+              additional structure to ensure type safety.  Jumps are
+              safe if the jump target has the same machine typing than
+              the jump source.  By <em>machine typing</em> we mean the
+              pair of the types of the local variables and the types
+              of the stack entries.  Consequently, each label (i.e.,
+              jump target) needs to be assigned a machine type and can
+              only be targeted from a program point with the same
+              machine type.  Technically, we represent labels as
+              machine-typed de Bruijn indices, and control-flow
+              instructions are indexed by a context of label types.
+              We then distinguish two types of labels:
+            </p>
+
+            <ol>
+              <li>Join points, e. g., labels of statements following
+                an `if-else` statement.  Join points can be
+                represented by a `let` binding in the abstract JVM
+                syntax.
+              </li>
+              <li>Looping points, e. g., labels at the beginning of a
+                `while` statement that allow back jumps to iterate the
+                loop.  Those are represented by `fix` (recursion).
+              </li>
+            </ol>
+
+            <p>
+              Using dependently-typed machine syntax, we ensure that
+              <em>well-typed jumps do not miss</em>.  As a result, we obtain
+              a type-preserving compiler by construction, with a good
+              chance of full correctness, since many compiler faults
+              already break typing invariants.  Intrinsic
+              well-typedness also allows us to write the compiler as a
+              total function from well-typed source to typed assembly,
+              and totality can be automatically verified by the Agda
+              type and termination checker.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <h4>14:00 &mdash; 14:30 &nbsp;&nbsp; COFFEE</h4>
+
+    <h4>14:30 &mdash; 15:30 &nbsp;&nbsp; SESSION 2: Effects and Communication</h4>
+    <table>
+      <tr>
+        <td class="author">
+          Wenhao Tang (Edinburgh)
+        </td>
+        <td class="title">
+          <span>
+            Tracking Linear Continuations for Effect Handlers
+          </span>
+          <div class="abstract" id="Wenhao/button">
+            <button onclick="showAbstract('Wenhao')">Abstract</button>
+          </div>
+          <div class="abstract" id="Wenhao/abstract" style="display:none;">
+            <button onclick="hideAbstract('Wenhao')">Hide Abstract</button>
+            <p>
+              Linear types and effect handlers are both useful
+              features for programming languages. However, they are
+              problematic when using together, as effect handlers may
+              invoke the continuations of operations zero or multiple
+              times, while conventional linear type systems do not
+              track the linearity of continuations. We present
+              Feffpop, a System F style calculus with linear types and
+              effect handlers, which uses type-and-effect system to
+              track linearity of continuations for operations. We
+              prove that it does not discard or duplicate linear
+              values during evaluation by defining a linearity-aware
+              semantics. To make it more practical, we present
+              λeffpop, an ML-variant of Feffpop with type inference
+              and no extra requirement for annotations. We also
+              present Qeffpop, an extension of λeffpop with a novel
+              form of effect system called qualified effect types,
+              which has better accuracy in tracking linear
+              continuations.
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="author">
+          Matthew Alan Le Brun (Glasgow)
+        </td>
+        <td class="title">
+          <span>
+            MAGπ: Types for Failure-Prone Communication
+          </span>
+          <div class="abstract" id="Matthew/button">
+            <button onclick="showAbstract('Matthew')">Abstract</button>
+          </div>
+          <div class="abstract" id="Matthew/abstract" style="display:none;">
+            <button onclick="hideAbstract('Matthew')">Hide Abstract</button>
+            <p>
+              Multiparty Session Types (MPST) are a type discipline
+              for communication-based systems that guarantee relevant
+              properties, such as communication safety, deadlock
+              freedom and protocol compliance. In recent years,
+              several works have emerged which model failures and
+              introduce failure-handling techniques. However, such
+              works often make heavy assumptions on the underlying
+              network, e.g., assuming TCP-based communication where
+              messages are guaranteed to be delivered; adopting
+              centralised reliable nodes and ad-hoc notions of
+              reliability; or only addressing a single kind of failure
+              (such as node crash failures). In this work, we develop
+              MAGπ—a Multiparty, Asynchronous and Generalised
+              π-calculus, which is the first language and type system
+              to accommodate in unison: (i) the widest range of
+              non-Byzantine faults; (ii) a novel and most general
+              notion of reliability; and (iii) a theory generalised
+              over a spectrum of network assumptions, from the lowest
+              level of UDP-based network programming to the TCP-based
+              application level.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <h4>15:30 &mdash; 16:00 &nbsp;&nbsp; COFFEE</h4>
+
+    <h4>16:00 &mdash; 17:00 &nbsp;&nbsp; SESSION 3: Verification and Representation</h4>
+    <table>
+      <tr>
+        <td class="author">
+          Omri Isac (Hebrew University of Jerusalem)
+        </td>
+        <td class="title">
+          <span>
+            Neural Network Verification with Proof Production
+          </span>
+          <div class="abstract" id="Omri/button">
+            <button onclick="showAbstract('Omri')">Abstract</button>
+          </div>
+          <div class="abstract" id="Omri/abstract" style="display:none;">
+            <button onclick="hideAbstract('Omri')">Hide Abstract</button>
+            <p>There are currently multiple techniques and tools for
+            verifying Deep Neural Networks (DNNs). When DNN verifiers
+            discover an input that triggers an error, that is easy to
+            confirm; but when they report that no error exists, there
+            is no way to ensure that the verification tool itself is
+            not flawed. As multiple errors have already been observed
+            in DNN verification tools, this calls the applicability of
+            DNN verification into question. In this talk, I will
+            present a novel mechanism for enhancing Simplex-based DNN
+            verifiers with proof production capabilities. We will
+            discuss how to create such mechanism based on an efficient
+            adaptation of the well-known Farkas’ lemma, combined with
+            mechanisms for handling piecewise-linear functions and
+            numerical precision errors. We will conclude by discussing
+            how to use the mechanism in order to improve the
+            performance of DNN verifiers, using conflict clauses.
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="author">
+          Guillaume Allais (St Andrews)
+        </td>
+        <td class="title">
+          <span>
+            A Universe for Serialised Data
+          </span>
+          <div class="abstract" id="Guillaume/button">
+            <button onclick="showAbstract('Guillaume')">Abstract</button>
+          </div>
+          <div class="abstract" id="Guillaume/abstract" style="display:none;">
+            <button onclick="hideAbstract('Guillaume')">Hide Abstract</button>
+            <p>In typed functional languages, one can typically only
+              manipulate data in a type-safe manner if it first has
+              been deserialised into an in-memory tree represented as
+              a graph of nodes-as-structs and subterms-as-pointers.
+            </p>
+            <p>We demonstrate how we can use QTT as implemented in
+              Idris 2 to define a small universe of serialised
+              datatypes, and provide generic programs allowing users
+              to process values stored contiguously in buffers.
+            </p>
+            <p>Our approach allows implementors to prove the full
+              functional correctness, in a correct by construction
+              manner, of the IO functions processing the data stored
+              in the buffer.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <h4>17:00 &mdash; late &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUB</h4>
+    <p>We have a reservation at the Haymarket pub, located next to the
+      Haymarket station in Edinburgh. We will take a bus there after
+      the seminar.</p>
+  </section>
+
+  <section>
+    <h3><a name="attending" class="anchor">Attending</a></h3>
+    <p>For the on-line participants, we will use the following Zoom meeting: <a href="https://zoom.us/j/92793668626">https://zoom.us/j/92793668626</a>.</p>
+    <h4>Registration</h4>
+    <ul>
+      <li>Please register <em>by 1st March</em> on the <a href="https://doodle.com/meeting/participate/id/dNOXNXNe">SPLS Doodle poll</a> if you plan to attend SPLS in person.</li>
+      <li>Registration is required for catering. There are no COVID restrictions on attendance. Mask wearing in packed indoor areas is encouraged, as is testing before attending.</li>
+    </ul>
+    <h4>Travel</h4>
+    <ul>
+      <li>By bus from Edinburgh: lines 25, 34, 35 and 45 to Heriot-Watt University (34 and 35 stop right outside the PG Centre, 25 and 45 at the main entrance to campus); lines X27 and X28 stop a short walk north from campus (Hermiston Walk).</li>
+      <li>By
+      train: <a href="https://www.scotrail.co.uk/plan-your-journey/stations-and-facilities/cuh">Curriehill
+      Station</a> on the southern Edinburgh&ndash;Glasgow line is located within walking distance (ca. 2km) from the venue;
+        <a href="https://www.scotrail.co.uk/plan-your-journey/stations-and-facilities/edp">Edinburgh
+          Park Station</a> on the northern Edinburgh&ndash;Glasgow
+          line is some 3km from the venue: you can catch a bus from
+          the Calder View stop or walk via the Union Canal footpath to
+          avoid A71.
+      <li><a href="https://www.hw.ac.uk/documents/car-parking-map-edinburgh.pdf">Parking on Campus</a>
+      </li>
+      <li>The Postgraduate Centre on the map (<a href="https://www.openstreetmap.org/?mlat=55.91213&amp;mlon=-3.32364#map=17/55.91213/-3.32364">larger version</a>)
+        <div class="map" style="width: 800px; text-align: center;">
+          <iframe width="800" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-3.3307242393493657%2C55.909404574933674%2C-3.316562175750733%2C55.914864489861706&amp;layer=mapnik&amp;marker=55.912134628500475%2C-3.323643207550049" style="border: 1px solid black"></iframe>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h3><a name="organisers" class="anchor">Organisers</a></h3>
+    <p>Filip Sieczkowski &lt;f.sieczkowski@hw.ac.uk&gt;, James McKinna &lt;j.mckinna@hw.ac.uk&gt; and Kathrin Stark &lt;k.stark@hw.ac.uk&gt;</p>
+  </section>
+
+  <footer>
+    <hr>
+    <p class="footer">
+      Last updated: 21 February 2023
+    </p>
+  </footer>
+</body>
+</html>

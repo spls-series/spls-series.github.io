@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SPLS Glasgow 2022</title>
+
+        <!-- Nice Styling -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    </head>
+
+    <body>
+        <section class="padding-top container">
+            <h1>SPLS Glasgow 1<sup>st</sup> July 2022</h1>
+
+            <p>
+                The <a href="spls-series.github.io">Scottish Programming Languages Seminar (SPLS)</a> 
+                is an informal seminar for discussing anything PL related.
+
+                This edition will be held both <strong>in-person</strong> and <strong>online</strong>.
+
+                The in-person meeting will be on <strong>Level 4, Sir Alwyn Williams Building, University of Glasgow</strong>.
+            </p>
+
+            <p>This edition of SPLS is sponsored by <a href="https://www.sicsa.ac.uk/">SICSA</a>.</p>
+
+        <img src="../../2019/june/static/images/sicsa_blue.jpg" alt="Scottish Informatics & Computer Science Alliance">
+        </section>
+
+        <section id="attending" class="container">
+            <h2>Attending</h2>
+
+            <p>
+                If you would like to attend physically, please register on the  
+                <a href="https://doodle.com/meeting/participate/id/epYJ7nXa">Doodle</a>.
+            </p>
+
+            <p>
+                There is no need to register if you would like to attend online.
+                Information on how the seminar will be streamed is coming soon.
+            </p>
+
+            <h3>COVID-19</h3>
+            <p>
+                Following Scottish Government and University guidance, we ask participants displaying potential COVID-19 symptoms not to attend physically, and encourage participants to wear masks in indoor areas should they become busy. 
+                The University supports the Distance Aware scheme, and can provide appropriate lanyards and badges.
+            </p>
+            <p>We strongly encourage participants to take a <strong>Lateral Flow Test (LFT)</strong> prior to the event; although the national testing programme has now finished, LFTs can be purchased from most major supermarkets and pharmacies.</p>
+        </section>
+
+        <section id="programme" class="container">
+            <h2>Programme</h2>
+
+            <p>
+                The following is a <i>tentative</i> schedule for this edition of SPLS. 
+                Note that the call for lightning talks is currently open, feel free to get in touch to give a short 5-10min talk about ongoing work.
+            </p>
+
+            <h3>Schedule</h3>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="double">12:00-13:00</td>
+                        <td class="double">Lunch</td>
+                        <td class="double"></td>
+                    </tr>
+
+                    <tr>
+                        <th>13:00-14:00</th>
+                        <th>Session: Semantics</th>
+                        <th>Chair: Simon Fowler</th>
+                    </tr>
+                    <tr class="clickable" onclick="window.location='#k-framework'">
+                        <td>13:00-13:30</td>
+                        <td>Bruce Collie</td>
+                        <td>The K Framework: Practical Semantic Tools from Term Rewriting</td>
+                    </tr>
+                    <tr class="clickable" onclick="window.location='#fitch-style-modal-calculi'">
+                        <td>13:30-14:00</td>
+                        <td>Nachiappan Valiappan</td>
+                        <td>Normalization for Fitch-style Modal Calculi</td>
+                    </tr>
+
+                    <tr>
+                        <td class="double">14:00-14:30</td>
+                        <td class="double">Coffee</td>
+                        <td class="double"></td>
+                    </tr>
+
+                    <tr>
+                        <th>14:30-15:30</th>
+                        <th>Session: Type Systems</th>
+                        <th>Chair: Matthew Alan Le Brun</th>
+                    </tr>
+                    <tr class="clickable" onclick="window.location='#idris-tyre'">
+                        <td>14:30-15:00</td>
+                        <td>Katarzyna Marek</td>
+                        <td>Idris-TyRE - a Dependently-Typed Regex Parser</td>
+                    </tr>
+                    <tr class="clickable" onclick="window.location='#typos'">
+                        <td>15:00-15:30</td>
+                        <td>Conor McBride</td>
+                        <td>TypOS: An Operating System for Typechecking Actors</td>
+                    </tr>
+
+                    <tr>
+                        <td class="double">15:30-16:00</td>
+                        <td class="double">Coffee</td>
+                        <td class="double"></td>
+                    </tr>
+
+                    <tr>
+                        <th>16:00-17:00</th>
+                        <th>Session: Refactoring and Lightning Talks</th>
+                        <th>Chair: Jeremy Singer</th>
+                    </tr>
+                    <tr class="clickable" onclick="window.location='#refactoring'">
+                        <td>16:00-16:30</td>
+                        <td>Chris Brown</td>
+                        <td>RePi: Towards a Refactoring Tool for Dependently Typed Programs</td>
+                    </tr>
+                    <tr class="no-bottom-border">
+                        <td>16:30-17:00</td>
+                        <td><i>Lightning Talks</i></td>
+                        <td></td>
+                    </tr>
+                    <tr class="no-bottom-border">
+                        <td></td>
+                        <td>Stefan Marr (remote)</td>
+                        <td>Job opportunities at Kent</td>
+                    </tr>
+                    <tr class="no-bottom-border">
+                        <td></td>
+                        <td>Vashti Galpin (remote)</td>
+                        <td>Temporal Links for Data Curation</td>
+                    </tr>
+                    <tr class="no-bottom-border">
+                        <td></td>
+                        <td>Matthew Alan Le Brun</td>
+                        <td>Towards Fault-Tolerant Session Types: A Calculus for Distributed Computing</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Daniel Hillerström</td>
+                        <td>WasmFX: Effect Handlers for WebAssembly</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Talks</h3>
+
+            <table>
+                <tbody>
+                    <tr id="k-framework">
+                        <th>Bruce Collie</th>
+                        <th>The K Framework: Practical Semantic Tools from Term Rewriting</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>K (<a href="https://kframework.org/">https://kframework.org/</a>) is a rewrite-based executable semantic framework in which programming languages, type systems and formal analysis tools can be defined. 
+                            From a single language definition in K, an entire suite of tools can be automatically derived (including a parser, concrete interpreter, and symbolic execution engine); it provides a flexible, powerful environment for constructing programming languages. 
+                            In this talk, I'll provide an introduction to K by demonstrating a simple imperative language semantics, along with a set of proofs over programs in this language enabled by K's generic theorem prover. 
+                            Finally, I'll talk briefly about how we use K commercially at scale in the blockchain and embedded software domains.</td>
+                    </tr>
+                    <tr id="fitch-style-modal-calculi">
+                        <th>Nachiappan Valiappan</th>
+                        <th>Normalization for Fitch-style Modal Calculi</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p>Fitch-style modal lambda calculi enable programming with necessity modalities in a typed lambda calculus by extending the typing context with a delimiting operator that is denoted by a lock. 
+                            The addition of locks simplifies the formulation of typing rules for calculi that incorporate different modal axioms, but each variant demands different, tedious and seemingly ad hoc syntactic lemmas to prove normalization. 
+                            In this work, we develop normalization by evaluation (NbE) for Fitch-style calculi that incorporate the K, T and 4 axioms of modal logic by leveraging their possible-world semantics. 
+                            The NbE approach exploits the commonalities of these calculi in the possible-world semantics and isolates their differences to a specific parameter that determines the modal fragment, thus enabling reuse of the evaluation machinery and many lemmas proved in the process. 
+                            Finally, we showcase several consequences of normalization for proving meta-theoretic properties of Fitch-style calculi based on different interpretations of the necessity modality in programming languages, such as capability safety, noninterference and a form of binding-time correctness.</p>
+                            <p>Paper and mechanization available <a href="https://nachivpn.me/k/">here</a>.</p>
+                        </td>
+                    </tr>
+                    <tr id="idris-tyre">
+                        <th>Katarzyna Marek</th>
+                        <th>Idris-TyRE - a Dependently-Typed Regex Parser</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Regexes are widely used not only for validating, but also for parsing textual data. 
+                            Generally, regex parsers output a very generic structure, e.g. an unstructured list of matches, leaving it up to the user to validate the output's properties and transform it into the desired structure. 
+                            Since the regex itself carries information about the structure, this leads to unnecessary repetition. 
+                            In this talk we will present Idris-TyRE - a library for type-driven regex parsing. 
+                            The idea is based on Radanne’s typed regexes library of the same name - a typed, indexed combinators layer that can be added on top of an existing regex engine. 
+                            In contrast to Radanne's design, we also implement a parser, which maintains the type-safety throughout all layers. 
+                            The parser is implemented in Idris 2 utilising the following features of Idris 2's advanced type system. 
+                            We take advantage of type-level computation to establish the correct parse tree type; we use dependent-type verification to ensure the result type correctness; and we benefit from quantitative types by erasing the proofs and avoiding run-time overhead.
+                            This is joint work with Ohad Kammar.</td>
+                    </tr>
+                    <tr id="typos">
+                        <th>Conor McBride</th>
+                        <th>TypOS: An Operating System for Typechecking Actors</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p>TypOS is an experimental language specific to the domain of implementing type checking, type synthesis and type-directed elaboration algorithms, presented as concurrent actors. We develop the idea "A rule is a server for its conclusion and a client for its premises." into a framework where the judgment forms are presented as interaction protocols and the rules for a given judgment are collectively presented as an actor serving the judgment's protocol.
+                            A running actor may spawn new actors of which it is the client, each with its own channel.
+                            The parameters to each judgement thus acquire not only a syntactic category, but also a mode as input or output.
+                            With this stromger sense of information flow, the language of formulae occurring in rules naturally splits into patterns which analyse things coming and expressions which synthesize things going. Expressions may contain substitutions to be done, but patterns may not, because substitutions are hard to undo.
+                            More generally, the TypOS design strategy is to prevent practices likely to result in failure of metatheoretical safety properties.
+                            We pay particular attention to term variable scope, for example ensuring that no actor can learn the name of a variable bound by another.
+                            TypOS also supports the speculation of unknowns, which become monotonically more defined as constraints are solved: we thus have the one kind of shared memory that makes sense in a distributed setting.
+                            Actors can thus block if they need information which is not yet available: ensuring that resuming actors operate on up-to-date information is the implementation challenge which precipitated the whole effort.</p>
+                            
+                            <p>TypOS is joint work with Guillaume Allais, Malin Altenmueller, Georgi Nakov, Fredrik Nordvall Forsberg and Craig Roy. <a href="https://github.com/msp-strath/TypOS">GitHub repository</a>.</td></p>
+                    </tr>
+                    <tr id="refactoring">
+                        <th>Chris Brown</th>
+                        <th>RePi: Towards a Refactoring Tool for Dependently Typed Programs</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p>Dependently-typed programming languages are becoming increasingly popular in the functional programming community,
+                                allowing programmers to express properties of logic and proofs as part of their implementation. Dependent types
+                                permit the programmer to implement safe programs, by encoding safety properties as parts of the types themselves;
+                                these properties can be encoded by permitting the types to depend on values. However, programming dependently-typed
+                                systems is still very difficult for the average software developer, who may have had some prior training with
+                                functional languages, such as Haskell, but lacks the background and experience in logic and type systems to make
+                                appropriate use of the dependent types to build strong safe systems as a part of their day-to-day practice.
+                            </p>
+                            <p>
+                                Refactoring aims to provide programmers with the ability to systemically restructure their code to better
+                                reflect its purpose, making it more amenable to change and maintainability, or simply to make it more understandable.
+                                The advantage of refactoring tool support is that it not only presents the programmer with a structured set of
+                                well-defined transformations, but it also alleviates the error-prone burden of manually making modifications across
+                                an entire project that might contain thousands of source code modules. To date, however, there are no refactoring
+                                tools for dependently-typed programming languages.
+                            </p>
+                            <p>
+                                In this talk, we address this problem by discussing a number of new refactorings to be implemented for the
+                                dependently-typed programming language, Pi-Forall, developed by Weirich. We particularly focus on refactorings
+                                for extending and maintaining data types in Pi-Forall. We demonstrate our prototype refactorings over a simple
+                                lambda calculus example and discuss our preliminary refactoring tool, RePi.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section id="organisers" class="container">
+            <h2>Organisers</h2>
+
+            <p>
+                The organisers of this edition of SPLS are <a href="mailto:jeremy.singer@glasgow.ac.uk">Jeremy Singer</a>, 
+                <a href="mailto:m.le-brun.1@research.gla.ac.uk">Matthew Alan Le Brun</a> 
+                and <a href="mailto:simon.fowler@glasgow.ac.uk">Simon Fowler</a>.
+
+                Feel free to contact any of the organisers about queries regarding this seminar.
+            </p>
+        </section>
+    </body>
+
+    <style>
+        body {
+            display: block;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            position: relative;
+            width: 100%;
+            text-align: justify;
+        }
+
+        section {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+
+        a {
+            color: #006630;
+            text-decoration: underline;
+        }
+
+        .padding-top {
+            padding-top: 2rem;
+        }
+
+        td.double {
+            border-top: 0.3rem double #e1e1e1;
+            border-bottom: 0.3rem double #e1e1e1;
+        }
+
+        table {
+            text-align: justify;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .no-bottom-border td{
+            border-bottom-width: 0rem;
+        }
+
+    </style>
+</html>

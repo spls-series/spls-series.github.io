@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <!-- Mobile-friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>SPLS June 17, 2019</title>
+    <!--    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Source+Sans+Pro:400,700" rel="stylesheet"> -->
+    <!-- Import Bootstrap CSS -->
+    <link rel="stylesheet" href="static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css">
+    <!-- Import site specific layout -->
+    <link rel="stylesheet" href="static/css/layout.css" type="text/css">
+  </head>
+  <body>
+    <div class="container-fluid mt-md-3">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>Scottish Programming Languages Seminar</h1>
+          <h1>Monday 17th June 2019</h1>
+          <p>
+            The <a href="../../../">Scottish Programming Languages
+            Seminar (SPLS)</a> is an informal meeting for the
+            discussion of any aspect of programming languages. SPLS
+            will be held at the Informatics Forum, the University of
+            Edinburgh on Monday 17th June 2019.
+          </p>
+
+          <p>
+            Information and updates about the June 2019 edition of
+            SPLS will be communicated via
+            the <a href="https://mr1.dcs.gla.ac.uk/mailman/listinfo/spls">SPLS
+            Mailing List</a>.
+          </p>
+          <div class="container">
+            <img src="static/images/sicsa_blue.jpg" />
+          </div>
+          <div class="container">
+            <img src="static/images/lfcs.jpeg" />
+          </div>
+
+	  <h2><a name="programme" class="anchor">Programme</a></h2>
+	  <p>
+	    The meeting will begin at 11:30 and last until 17:30. The
+	    talks will take place in room G.07.
+	  </p>
+	  <h6>11:30 &mdash; 12:30: Type-driven Verification and Weak Memory Semantics</h6>
+	  <ul>
+	    <li> <span class="author-title"><a href="https://adb23.host.cs.st-andrews.ac.uk/">Adam Barwell</a>, <span class="title">Type-Driven Verification of Non-functional Properties</span></span>
+	      <p class="abstract">
+		Energy, Time and Security (ETS) properties of
+		programs are becoming increasingly prioritised by
+		developers, especially where applications are
+		running on ETS sensitive systems, such as embedded
+		devices or the Internet of Things. Moreover,
+		developers currently lack tools and language
+		properties to allow them to reason about ETS. In
+		this paper, we introduce a new contract
+		specification framework, called Drive, which allows
+		a developer to reason about ETS or other
+		non-functional properties of their programs as
+		first-class properties of the language. Furthermore,
+		we introduce a contract specification language,
+		allowing developers to reason about these
+		first-class ETS properties by expressing contracts
+		that are proved correct by an underlying formal type
+		system. Finally, we show our contract framework over
+		a number of representable examples, demonstrating
+		provable worst-case ETS properties.
+	      </p>
+	    </li>
+            <li> <span class="author-title"><a href="https://www.cl.cam.ac.uk/~bs630/">Ben Simner</a>, <span class="title">Modelling instruction fetching in ARM assembly</span></span>
+              <p class="abstract">
+                Weak memory semantics studies modern hardware, such as
+                ARMv8, which allow surprising behaviours.  In this
+                talk, I will give a brief introduction to this area
+                and explain the ongoing work in modelling the
+                system-level aspects of the Arm architecture as used
+                in operating system kernels, and JIT compilers,
+                particularly those related to self-modifying code.  I
+                will: show examples of weak behaviours for
+                self-modifying code and instruction fetching; and give
+                the current operational model that explains these
+                behaviours.  This work is used by architects to
+                rigorously analyse their architecture, OS kernel
+                programmers to gain confidence in the architectural
+                guarantees for the correctness of their code, and
+                programming language implementors who wish to
+                implement efficient just-in-time compilation.
+              </p>
+            </li>
+	  </ul>
+	  <h6>12:30 &mdash; 13:30: Lunch</h6>
+	  <p class="abstract">
+	    Lunch will be served in the cafe area in the atrium.
+	  </p>
+	  <h6>13:30 &mdash; 14:30: Linearity and Strings</h6>
+	  <ul>
+	    <li> <span class="author-title"><a href="https://personal.cis.strath.ac.uk/james.wood.100/">James Wood</a>, <span class="title">Linear metatheory via linear algebra</span></span>
+	      <p class="abstract">
+		It is well known that linear logic has semantics in
+		symmetric monoidal closed categories, including the
+		category of vector spaces and matrices.  We find
+		that, aside from semantics, vectors and matrices are
+		useful in the syntax too. I will present a calculus
+		related to Atkey's Quantitative Type Theory where
+		usage of variables can be constrained in various
+		ways via annotations on variables in the context. We
+		read a context's worth of annotations as a vector,
+		and get that substitution involves matrix-vector
+		multiplication. This leads to a clean statement and
+		proof of the substitution lemma, where the data stay
+		the same even as usage restrictions change in the
+		typing derivation.
+	      </p>
+	    </li>
+	    <li> <span class="author-title">Chad Nester, <span class="title">String Diagrams for Cartesian Restriction Categories</span></span>
+              <p class="abstract">
+                Partial maps occur violently in the foundations of
+                computer science, so we should be interested in how
+                partiality works. Restriction categories capture
+                partiality abstractly, but the resulting formalism can
+                be difficult to work with. String diagrams are
+                becoming widely used as a tool to simplify the
+                presentation of tedious proofs in settings where they
+                apply. In this talk I will present a series of happy
+                coincidences of structure that allow us to reason
+                about restriction categories with restriction products
+                (and more) using string diagrams.
+              </p>
+            </li>
+	  </ul>
+	  <h6>14:30 &mdash; 15:00: Coffee break</h6>
+	  <p class="abstract">
+	    Coffee, tea, and biscuits will be served in the cafe area
+	    in the atrium.
+	  </p>
+	  <h6>15:00 &mdash; 16:00: Probabilistic Programming and Deep Learning</h6>
+	  <ul>
+	    <li> <span class="author-title"><a href="http://homepages.inf.ed.ac.uk/s1207807/">Maria Gorinova</a>, <span class="title">Program transformations for efficient probabilistic programming with discrete variables</span></span>
+              <p class="abstract">
+                The goal of probabilistic programming is to allow
+                users to directly reason about their probabilistic
+                models and processes generating data, while
+                abstracting away the complicated algorithms needed to
+                perform Bayesian inference. In practice, however,
+                probabilistic programming languages are forced to
+                trade off between generality of the language and
+                efficiency of inference. For example, Stan &mdash; a
+                popular probabilistic programming language &mdash;
+                sacrifices discrete model parameters support, in
+                exchange for efficient, gradient-based inference.<br /><br />
+
+                However, there exist work-around methods for inference
+                with discrete parameters, as described by Stan's
+                language manual. A knowledgeable and experienced user
+                can manually encode discrete parameters into the
+                program, by marginalising them out of the target
+                probability density. In this work-in-progress talk, I
+                will explain in more detail how this is achieved, and
+                talk about possible ways of automating this process
+                using program transformations.
+              </p>
+            </li>
+	    <li> <span class="author-title"><a href="http://www.dcs.gla.ac.uk/~josecr/">José Cano Reyes</a>, <span class="title">Moving Deep Learning to the Edge</span></span>
+	      <p class="abstract">
+		In this talk I'll motivate the need for moving the
+		execution of emerging deep learning applications to
+		edge devices and I'll describe my recent work
+		related to it. Finally, I'll outline some research
+		ideas for future work.
+	      </p>
+	    </li>
+	  </ul>
+	  <h6>16:00 &mdash; 16:30: Coffee break</h6>
+	  <p class="abstract">
+	    Coffee, tea, and biscuits will be served in the cafe area
+	    in the atrium.
+	  </p>
+	  <h6>16:30 &mdash; 17:30: Dependent Types</h6>
+	  <ul>
+	    <li> <span class="author-title"><a href="https://gallais.github.io/">Guillaume Allais</a>, <span class="title">Generic Level Polymorphic N-ary Functions</span></span>
+	      <p class="abstract">
+		Agda's standard library struggles in various places
+		with n-ary functions and relations. It introduces congruence and
+		substitution operators for functions of arities one and two, and
+		provides users with convenient combinators for manipulating indexed
+		families of arity exactly one.<br /><br />
+
+		After a careful analysis of the kinds of problems
+		the unifier can easily solve, we design a
+		unifier-friendly representation of n-ary functions.
+		This allows us to write generic programs acting on
+		n-ary functions which automatically reconstruct the
+		representation of their inputs' types by
+		unification. In particular, we can define fully
+		level polymorphic n-ary versions of congruence,
+		substitution and the combinators for indexed
+		families, all requiring minimal user input.
+	      </p>
+	    </li>
+	    <li> <span class="author-title"><a href="https://edwinb.wordpress.com/">Edwin Brady</a>, <span class="title">Type Driven Development of Idris 2</span></span></li>
+	  </ul>
+	  <h6>17:30 &mdash; : Pub</h6>
+
+          <h2><a name="location" class="anchor">Location</a></h2>
+          <p>
+            SPLS will take place at the Informatics Forum, 10 Crichton
+            Street, Edinburgh. The main entrance is opposite Appleton
+            Tower. The seminar will take place
+            in <span class="bold">room G.07</span>. Lunch and coffee
+            breaks will take place in
+            the <span class="bold">Atrium</span>. All will be
+            signposted on the day.
+          </p>
+
+          <p>
+            <div class="interactive-map" id="map-area" class="map">
+              <!-- Spinner; only supposed to be displayed whilst the
+                   Google Map iframe is loading. -->
+              <div class="d-flex justify-content-center" id="map-loader">
+                <div class="spinner-border" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+              <!-- Embedded Google Map; uses JavaScript to render
+                   iframe once its contents have been loaded. -->
+              <iframe id="map-instance" class="interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1183.5610174371202!2d-3.187107574010932!3d55.944767069959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c78447fcdee1%3A0xb4769668986c5918!2s10+Crichton+St%2C+Edinburgh+EH8+9AB!5e0!3m2!1sen!2suk!4v1441824634154" frameborder="0" style="display: none;" onload="displayWhenReady('map-instance', 'map-loader');"></iframe>
+              <!-- Notice to noscripters -->
+              <noscript>
+                Enable JavaScript to view the interactive map
+              </noscript>
+            </div>
+          </p>
+
+          <p>
+            Further information about travelling to the Informatics
+            Forum can be found on
+            the <a href="http://www.ed.ac.uk/informatics/about/location">School
+            of Informatics web site</a>.
+          </p>
+
+	  <h2><a name="registration" class="anchor">Registration</a></h2>
+          <p>Please
+          <a href="https://rsvp.dhil.io/?event=ad774e8f-5833-40e9-aa08-9a89025d95ac">register
+          using the RSVP tool</a> to indicate whether you like to
+          attend the event. Registration is free and non-binding.</p>
+
+          <h2><a name="acknowledgements" class="anchor">Acknowledgements</a></h2>
+          We gratefully acknowledge the continued support of
+          the <a href="https://www.sicsa.ac.uk/research/theory-modelling-computation/">SICSA
+          Theory, Modelling and Computation theme</a> and
+          the <a href="http://wcms.inf.ed.ac.uk/lfcs/">Laboratory for
+          Foundations of Computer Science (LFCS)</a> at the University
+          of Edinburgh.
+
+          <h2><a name="organisers" class="anchor">Organisers</a></h2>
+          <p>
+            The organisers are <a href="https://www.dhil.net">Daniel
+            Hillerstr&ouml;m</a>
+            and <a href="http://homepages.inf.ed.ac.uk/slindley">Sam
+            Lindley</a>, contact us via e-mail
+            ({first.lastname}@ed.ac.uk).
+          </p>
+        </div>
+        <div class="col-lg"></div>
+      </div>
+    </div>
+    <!-- Import JavaScript sources -->
+    <script type="text/javascript" src="static/js/lazyload_google_maps.js"></script>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPLS, June 30th, 2021, online</title>
+  <link rel="stylesheet" href="sakura.css">
+  <style>
+.column {
+  float: right;
+  width: 30%;
+  padding: 15px;
+}
+
+.row {
+  margin-top: 26px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-bottom: 0px;
+  /*border: 1px solid black;*/
+}
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.time {
+  vertical-align: top;
+}
+.speaker {
+}
+.talk-title {
+  text-decoration: underline;
+}
+.talk-abstract {
+  display: none;
+}
+</style>
+  <script>
+        function toggleAbstract(id) {
+                var e = document.getElementById(id);
+                s = getComputedStyle(e, null).display;
+                if (s === "none") {
+                        e.style.display = "block";
+                } else {
+                        e.style.display = "none";
+                }
+        }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>SPLS online &mdash; June 30th </h1>
+  </header>
+
+  <section>
+    <h2>Attendance</h2>
+    <p>Please register for the SPLS
+    meeting <a href="https://www.eventbrite.co.uk/e/154107512719">here</a>.
+    The main purpose of the registration is to estimate the number of
+    participants so that we could adjust the online platforms
+    accordingly.</p>
+
+    <h3>Platforms</h3>
+    <p>The meeting will be coordinated using the <i>#spls-2021-06</i>
+    stream on the <a href="https://spls.zulipchat.com/">SPLS Zulip</a>
+    chat service.</p>
+
+    <p>The talks will be delivered
+    via <a href="https://zoom.us/">Zoom</a>. The talks will also be
+    live-streamed to
+    the <a href="https://www.youtube.com/channel/UCBcLg-U3OjT49mC3xV7gGWA/">SPLS
+    youtube channel</a>.
+    <!--SPLS youtube channel (the actual links will appear soon)-->.</p>
+
+    <p>The links to the Zoom meetings will be announced on Zulip prior
+    to the talks.</p>
+
+    <!--p>The questions after each talk may be asked directly using audio
+    in Zoom or via the <i>#spls-2021-06</i> stream on Zulip. Each talk
+    has been pre-assigned its own separate topic.</p-->
+
+    <p>Breaks and the virtual pub session will take place in the SPLS
+    bar on <a href="https://gather.town/">gather.town</a>. The link to
+    the room will be posted on Zulip.</p>
+  </section>
+
+  <section>
+    <h3>Programme</h3>
+    <p>All the times below are given in UTC+01:00 (UK time zone). </p>
+    <table>
+        <tr>
+                <td class="time">13:00&ndash;14:00</td>
+                <td>
+                        <div class="speaker">Neel Krishnaswami</div>
+                        <a href="javascript:toggleAbstract('abstract1')">
+                                Adjoint Reactive GUI Programming
+                        </a>
+                        <div id="abstract1" class="talk-abstract">
+                          <p>Most interaction with a computer is done via a graphical user
+                          interface. Traditionally, these are implemented in an imperative fashion
+                          using shared mutable state and callbacks. This is efficient, but is also
+                          difficult to reason about and error prone. Functional Reactive Programming
+                          (FRP) provides an elegant alternative which allows GUIs to be designed in
+                          a declarative fashion. However, most FRP languages are synchronous and
+                          continually check for new data. This means that an FRP-style GUI will
+                          “wake up” on each program cycle. This is problematic for applications like
+                          text editors and browsers, where often nothing happens for extended
+                          periods of time, and we want the implementation to sleep until new data
+                          arrives. In this paper, we present an asynchronous FRP language for
+                          designing GUIs called λWidget. Our language provides a novel semantics for
+                          widgets, the building block of GUIs, which offers both a natural
+                          Curry–Howard logical interpretation and an efficient implementation
+                          strategy.
+                          </p>
+                        </div>
+                </td>
+        </tr>
+        <tr>
+                <td class="time">14:15&ndash;14:45</td>
+                <td>
+                        <div class="speaker">Thomas Koehler</div>
+                        <a href="javascript:toggleAbstract('abstract2')">
+                                Optimizing Functional Programs with Equality Saturation
+                        </a>
+                        <div id="abstract2" class="talk-abstract">
+                                <p>Equality saturation is a rewrite-driven optimization technique
+                                which leverages a special data structure called e-graph to
+                                efficiently represent many variants of a rewritten expressions.
+                                </p>
+                                <p>However, challenges arise when applying this technique to
+                                optimize functional programs. How can we for example efficiently
+                                implement alpha-equivalence; substitution for beta-reduction; or
+                                predicates for eta-reduction? </p>
+
+                                <p>In this talk, we investigate different solutions to address
+                                these challenges, such as using De-Bruijn indices instead of named
+                                identifiers.</p>
+
+                                <p>We show their impact in practice when optimizing programs
+                                expressed in Rise: a typed lambda calculus. </p>
+
+                                <p>We will show that the presented solutions enable us to discover
+                                more complex optimizations than a naive implementation, although
+                                scaling the technique further remains an open challenge.</p>
+                        </div>
+                </td>
+        </tr>
+        <tr>
+                <td class="time">15:00&ndash;15:30</td>
+                <td>
+                        <div class="speaker">Jamie Gabbay</div>
+                        <a href="javascript:toggleAbstract('abstract3')">
+                                Nominal programming for the working programmer
+                        </a>
+                        <div id="abstract3" class="talk-abstract">
+                          <p> I'll outline what it would take to implement a "Nominal" package in an
+                          arbitrary programming language, generalising from my experience from
+                          designing the <a href=https://hackage.haskell.org/package/nom>Nominal
+                            Haskell package.</a>
+                          </p>
+
+                        </div>
+                </td>
+        </tr>
+        <tr>
+                <td class="time">16:00&ndash;16:30</td>
+                <td>
+                        <div class="speaker">Sam Lindley</div>
+                        <a href="javascript:toggleAbstract('abstract4')">
+                                Handler calculus
+                        </a>
+                        <div id="abstract4" class="talk-abstract">
+                          <p>We present handler calculus, a core calculus of effect
+                          handlers. Inspired by the Frank programming language, handler
+                          calculus does not have primitive functions, just handlers.
+                          Functions, products, sums, and inductive types, are all encodable
+                          in handler calculus. We extend handler calculus with recursive
+                          effects, which we use to encode recursive data types. We extend
+                          handler calculus with parametric operations, which we use to
+                          encode existential data types. We then briefly outline how one
+                          can encode universal data types by composing a CPS translation
+                          for parametric handler calculus into System F with Fujita’s CPS
+                          translation of System F into minimal existential logic.</p>
+                        </div>
+                </td>
+        </tr>
+        <tr>
+                <td class="time">16:45&ndash;17:15</td>
+                <td>
+                        <div class="speaker">Wen Kokke</div>
+                        <a href="javascript:toggleAbstract('abstract5')">
+                           Prioritise the Best Variation
+                        </a>
+                        <div id="abstract5" class="talk-abstract">
+                          <p>Binary session types guarantee communication safety and session
+                          fidelity, but alone they cannot rule out deadlocks arising from the
+                          interleaving of different sessions. <br/>
+                          In Classical Processes (CP)—a process calculus based on classical linear
+                          logic—deadlock freedom is guaranteed by combining channel creation and
+                          parallel composition under the same logical cut rule. Similarly, in Good
+                          Variation (GV)—a linear concurrent λ-calculus—deadlock freedom is
+                          guaranteed by combining channel creation and thread spawning under the
+                          same operation, called fork. <br/>
+                          In both CP and GV, deadlock freedom is achieved at the expense of
+                          expressivity, as the only processes allowed are tree-structured. Dardha
+                          and Gay define Priority CP (PCP), which allows cyclic-structured
+                          processes and restores deadlock freedom by using priorities, in line with
+                          Kobayashi and Padovani. <br/>
+                          Following PCP, we present Priority GV (PGV), a variant of GV which
+                          decouples channel creation from thread spawning. Consequently, we type
+                          cyclic-structured processes and restore deadlock freedom by using
+                          priorities. We show that our type system is sound by proving subject
+                          reduction and progress. We define an encoding from PCP to PGV and prove
+                          that the encoding preserves typing and is sound and complete with respect
+                          to the operational semantics.
+                          </p>
+                        </div>
+                </td>
+        </tr>
+        <tr>
+                <td class="time">17:30&ndash;18:00</td>
+                <td>
+                        <div class="speaker">Celeste Hollenbeck</div>
+                        <a href="javascript:toggleAbstract('abstract6')">
+                                Investigating Magic Numbers: An Evaluation of Inlining in the Glasgow Haskell Compiler
+                        </a>
+                        <div id="abstract6" class="talk-abstract">
+                          <p>Haskell’s performance can sometimes rival that of low-level languages.
+                          However, many of the performance-affecting decisions of the Glasgow
+                          Haskell Compiler (GHC) are informed by out-of-date heuristics typically
+                          evaluated on nofib, an out-of-date benchmark suite. </p>
+                          <p> We investigated the
+                          case for upgrading GHC’s inliner by gathering performance data across
+                          real-world Haskell packages. To do so, we developed an updated benchmark
+                          suite and evaluated the impact of some of GHC's hard-coded constants, or
+                          "magic-numbers", on GHC’s inlining behaviour. Using these benchmarks, we
+                          demonstrated the potential for a 12.37 % geometric mean speedup.</p>
+                          <p>This
+                          speedup is not attainable, however, without rewriting GHC’s inliner. With
+                          its current code, our analysis shows that a replacement of the inliner’s
+                          numerical thresholds—its magic numbers—would only yield a speedup of
+                          5.36%, justifying a rethink of GHC’s inliner design.
+                          </p>
+                        </div>
+                </td>
+        </tr>
+        <tr><td class="time">19:00&ndash;...</td><td>Virtual Pub</td></tr>
+    </table>
+  </section>
+
+
+  <section>
+    <h3>Organisers</h3>
+      General information about SPLS is available from the
+      <a href="https://spls-series.github.io">SPLS page</a>.
+
+      For further information about this event, please contact
+      <a href="mailto:andre.videla@strath.ac.uk">Andre Videla</a> or
+
+      Members of the SPLS community can be contacted via
+      <a href="https://spls.zulipchat.com/">SPLS Zulip</a>.
+  </section>
+</body>
+</html>
